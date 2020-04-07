@@ -2,7 +2,7 @@
 
 This librery uses Kotlin annotation processor (kapt) to generate builders for Kotlin classes. Classes needs to have `@GenerateBuilder` annotation. Example:
 
-```
+```kotlin
 @GenerateBuilder
 class User(
     val userId: Id,
@@ -15,7 +15,7 @@ class Id(val id: String)
 ```
 
 Generated class:
-```
+```kotlin
 class UserBuilder() {
     var userId: Id by Delegates.notNull()
 
