@@ -1,0 +1,19 @@
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+version 'unspecified'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':annotation')
+    kapt project(':processor')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'org.codehaus.groovy:groovy-all:2.3.11'
+}

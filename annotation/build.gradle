@@ -1,0 +1,2 @@
+// leave this at the end
+apply from: rootProject.file('release-bintray.gradle')

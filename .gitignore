@@ -1,0 +1,6 @@
+annotation/build/
+build/
+processor/build/
+example/build/
+.idea
+.gradle

@@ -1,0 +1,28 @@
+ext {
+    libraryVersion = '0.0.9'
+
+    def groupName = "com.marcinmoskala.generatebuilder"
+    bintrayRepo = 'generatebuilder'
+    bintrayName = "$groupName:$POM_ARTIFACT_ID"
+
+    publishedGroupId = groupName
+    libraryName = POM_NAME
+    artifact = POM_ARTIFACT_ID
+
+    libraryDescription = 'Auto-generates Builder for your Kotlin classes using annotations. Pribarly to use data classes easily from other languages like Groovy or Java.'
+
+    siteUrl = 'https://github.com/MarcinMoskala/generate-builder'
+    gitUrl = 'https://github.com/MarcinMoskala/generate-builder'
+
+    developerId = 'marcinmoskala'
+    developerName = 'Marcin Moskala'
+    developerEmail = 'marcinmoskala@gmail.com'
+
+    licenseName = "The Apache Software License, Version 2.0"
+    licenseUrl = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+    licenseDist = "repo"
+    allLicenses = ['Apache-2.0']
+}
+
+// Publish on Bintray.
+apply from: rootProject.file('bintray/bintray.gradle')
