@@ -5,7 +5,7 @@ pluginManagement {
         mavenCentral()
     }
 }
-rootProject.name = 'core'
+rootProject.name = 'Generate Builder'
 
 include 'annotation'
 include 'processor'

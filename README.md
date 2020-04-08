@@ -1,5 +1,7 @@
 # Kotlin Generate Builder library
 
+This library is experimental now! It might change a lot. 
+
 This librery uses Kotlin annotation processor (kapt) to generate builders for Kotlin classes. Classes needs to have `@GenerateBuilder` annotation. Example:
 
 ```kotlin
@@ -87,4 +89,6 @@ User makeUserBuilder() = new UserBuilder(defaultUser)
         .build()
 ```
 
-This library is not yet published but it will be once it is stable.
+This library is not yet published but it will be once it is stable. For testing purposes, it can be found here:
+https://bintray.com/marcinmoskala/MarcinMoskala/GenerateBuilder
+https://dl.bintray.com/marcinmoskala/MarcinMoskala/

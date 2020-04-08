@@ -1,18 +1,18 @@
 ext {
-    libraryVersion = '0.0.9'
+    libraryVersion = '0.0.1'
 
     def groupName = "com.marcinmoskala.generatebuilder"
-    bintrayRepo = 'generatebuilder'
+    bintrayRepo = 'MarcinMoskala'
     bintrayName = "$groupName:$POM_ARTIFACT_ID"
 
     publishedGroupId = groupName
     libraryName = POM_NAME
     artifact = POM_ARTIFACT_ID
 
-    libraryDescription = 'Auto-generates Builder for your Kotlin classes using annotations. Pribarly to use data classes easily from other languages like Groovy or Java.'
+    libraryDescription = 'Auto-generates builder for your Kotlin classes using annotations. Pribarly to use data classes easily from other languages like Groovy or Java.'
 
-    siteUrl = 'https://github.com/MarcinMoskala/generate-builder'
-    gitUrl = 'https://github.com/MarcinMoskala/generate-builder'
+    siteUrl = 'https://github.com/marcinmoskala/generate-builder'
+    gitUrl = 'https://github.com/marcinmoskala/generate-builder'
 
     developerId = 'marcinmoskala'
     developerName = 'Marcin Moskala'
