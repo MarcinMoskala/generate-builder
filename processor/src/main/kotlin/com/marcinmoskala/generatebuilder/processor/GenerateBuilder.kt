@@ -35,7 +35,7 @@ class GenerateBuilder : AbstractProcessor() {
     private fun processClass(element: TypeElement) {
         val metadata = element.kotlinMetadata as? KotlinClassMetadata
 
-        if (metadata == null || metadata.data.classProto.isDataClass) {
+        if (metadata == null) {
             processingEnv.error(element, "@GenerateBuilder must be used in a Kotlin data class, cannot be used in $element")
             return
         }

@@ -8,9 +8,9 @@ import me.eugeniomarletti.kotlin.metadata.shadow.metadata.ProtoBuf.Type
 import me.eugeniomarletti.kotlin.metadata.shadow.metadata.ProtoBuf.TypeParameter
 import me.eugeniomarletti.kotlin.metadata.shadow.metadata.deserialization.NameResolver
 
-internal fun ProtoBuf.TypeParameter.asTypeName(
+internal fun TypeParameter.asTypeName(
     nameResolver: NameResolver,
-    getTypeParameter: (index: Int) -> ProtoBuf.TypeParameter,
+    getTypeParameter: (index: Int) -> TypeParameter,
     resolveAliases: Boolean = false
 ): TypeVariableName {
     return TypeVariableName(
@@ -23,11 +23,11 @@ internal fun ProtoBuf.TypeParameter.asTypeName(
     )
 }
 
-internal fun ProtoBuf.TypeParameter.Variance.asKModifier(): KModifier? {
+internal fun TypeParameter.Variance.asKModifier(): KModifier? {
     return when (this) {
-        ProtoBuf.TypeParameter.Variance.IN -> KModifier.IN
-        ProtoBuf.TypeParameter.Variance.OUT -> KModifier.OUT
-        ProtoBuf.TypeParameter.Variance.INV -> null
+        TypeParameter.Variance.IN -> KModifier.IN
+        TypeParameter.Variance.OUT -> KModifier.OUT
+        TypeParameter.Variance.INV -> null
     }
 }
 
@@ -41,7 +41,7 @@ internal fun ProtoBuf.TypeParameter.Variance.asKModifier(): KModifier? {
  */
 internal fun ProtoBuf.Type.asTypeName(
     nameResolver: NameResolver,
-    getTypeParameter: (index: Int) -> ProtoBuf.TypeParameter,
+    getTypeParameter: (index: Int) -> TypeParameter,
     useAbbreviatedType: Boolean = true
 ): TypeName {
 
